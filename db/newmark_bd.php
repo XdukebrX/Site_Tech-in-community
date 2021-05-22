@@ -8,6 +8,7 @@
 	$decs = filter_input(INPUT_POST, 'dec');
 	$lng = $_SESSION['lng'];
 	$lat = $_SESSION['lat'];
+	$user =$_SESSION['user'];
 	$chek = 0;
 	date_default_timezone_set('America/Sao_Paulo');
 	$dimean = date_create('now')->format('Y-m-d H:i:s');
@@ -20,7 +21,7 @@
 
 
 	if($titulo && $rampa) {
-		$sql = 'INSERT INTO markers (titulo, rampa, brawl, pisotatil, info, lat, lon, cheked, dimean ) VALUES (:titulo, :ramp, :braw, :piso,:decs,:lat, :lng, :cheked, :dieman)';
+		$sql = 'INSERT INTO markers (titulo, rampa, brawl, pisotatil, info, lat, lon, cheked, dimean, idcriador ) VALUES (:titulo, :ramp, :braw, :piso,:decs,:lat, :lng, :cheked, :dieman, :user)';
 		$sth = $con->prepare($sql);
 	
 		#substituir os rótulos
@@ -33,6 +34,7 @@
 		$sth->bindParam(':lat', $lat);
 		$sth->bindParam(':cheked', $chek);
 		$sth->bindParam(':dieman', $dimean);
+		$sth->bindParam(':user', $user);
 
 		#executa o SQL
 		$sth->execute();

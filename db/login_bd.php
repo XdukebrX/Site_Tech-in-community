@@ -13,7 +13,7 @@
 	#executa o SQL
 	try {
 
-			$sql = 'SELECT * FROM usuario WHERE email=:email AND senha=:senha LIMIT 1';
+			$sql = 'SELECT * FROM usuario WHERE email=:email AND passwd=:senha LIMIT 1';
 
 			$sth = $con->prepare($sql);
 
@@ -25,7 +25,7 @@
 		$usuario = $sth->fetch();
 		if ($usuario) {
 			session_start();
-			$_SESSION['user'] = $usuario["id"];
+			$_SESSION['user'] = $usuario["id"];//salva o ID do usuario do banco no param user da seção
 			$_SESSION['admin'] = $usuario["isadm"];
 			header('Location:../index.php');
 			

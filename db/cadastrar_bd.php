@@ -13,7 +13,7 @@
 	$senha = md5($salt.$senha);
 
 	if($nome && $email && $senha) {
-		$sql = 'INSERT INTO usuario (username, email, senha, isadm) VALUES (:nome, :email, :senha, :isadm)';
+		$sql = 'INSERT INTO usuario (username, email, passwd, isadm) VALUES (:nome, :email, :senha, :isadm)';
 		$sth = $con->prepare($sql);
 	
 		#substituir os rótulos

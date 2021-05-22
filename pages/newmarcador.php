@@ -31,7 +31,7 @@
 						<textarea name="dec" style="width:400px; height:200px;"></textarea>
 					</div>
 					<div class="form-group ">
-						<label for="ops">marque as opçoes de acessibilidade</label>
+						<label for="ops">marque as opçoes de acessibilidade abaixo</label>
 						<br>
 						<input type="checkbox" name="ramp" value="1" checked> rampa<br>
 						<input type="checkbox" name="piso" value="1" checked> piso tatil <br>
@@ -40,14 +40,15 @@
 						
 							
 					</div>
-				<!--	<input type="hidden" name="lng" value="lng">
+				<!--	< um erro bem especifico>
 					<input type="hidden" name="lat" value="lat"> -->
 					
 					<button type="submit" class="btn btn-primary">comfirma</button>
 				</form>
 			</div>
-
+				
 			<?php
+			
 			if (isset($_GET['lat'])) {
 				$_SESSION['lat'] = $_GET['lat'];
 				$_SESSION['lng']= $_GET['lng'];
