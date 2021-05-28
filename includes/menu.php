@@ -1,13 +1,13 @@
 <?php session_start();?>
 <nav class="navbar  navbar-light bg-light">
-  <a class="navbar-brand" href="../index.php">menu</a>
+  <a class="navbar-brand" href="../index.php">Menu</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item">
-          <a  class="nav-link" href="map.php"> aplicaçao </a>
+          <a  class="nav-link" href="map.php"> Aplicaçao </a>
       </li>
       <?php
   			if( (isset($_SESSION['user']))) {

@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
-	<link rel="icon" href="/includes/ico.png">
+	<link rel="icon" href="../includes/ico.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
    crossorigin=""/>
-    <!-- Make sure you put this AFTER Leaflet's CSS -->
+ 
  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
    crossorigin=""></script>
@@ -65,11 +65,12 @@
 								}
 								popup
 									.setLatLng(e.latlng)
-									.setContent(`<h4> Você selecionou:${e.latlng} </h4>
+									.setContent(`<h4> Você selecionou:
+									${e.latlng} </h4>
 										<button type="button" class="acc btn btn-secondary">Aceitar</button>`)
 									.openOn(map);
 									$(".acc").click(function(){
-										window.location.href = "newmarcador.php?lat="+marcador.lat+"&lng="+marcador.lng;
+										window.location.href = "newmarcador.php?lat="+marcador.lat+" &lng="+marcador.lng;
 									});
 							}
 						
@@ -85,23 +86,37 @@
 							
 							foreach($resultados as $r) {
 								$acess= array();
-								if($r->rampa == 1){
-									array_push($acess,'<div class="text-success"><i class="icofont-wheelchair"></i> Possui rampa.</div>' );
-								}else{
-									array_push($acess,'<div class="text-danger"><i class="icofont-wheelchair"> Não possui rampa.</div>' );
+														
+								switch ($r->rampa) {
+									case 0:
+										
+										break;
+									case 1:
+										array_push($acess,'<div class="text-success"><i class="icofont-wheelchair"></i> Possui rampa.</div>' );
+										break;
+									
 								}
-								if($r->pisotatil == 1){
-									array_push($acess,'<div class="text-success"><i class="icofont-map-pins"></i> Possui piso tatil.</div>' );
-								}else{
-									array_push($acess,'<div class="text-danger"><i class="icofont-map-pins"></i> Não possui piso tatil.</div>' );
+
+								switch ($r->pisotatil) {
+									case 0:
+										array_push($acess,'<div class="text-danger"><i class="icofont-map-pins"></i> Não possui piso tatil.</div>' );
+										break;
+									case 1:
+										array_push($acess,'<div class="text-success"><i class="icofont-map-pins"></i> Possui piso tatil.</div>' );
+										break;
+									
 								}
-								if($r->brawl == 1){
-									array_push($acess,'<div class="text-success"><i class="icofont-hand"></i> Possui linguajem brawle.</div>' );
-								}else{
-									array_push($acess,'<div class="text-danger"><i class="icofont-hand"></i> Não possui linguajem brawle.</div>');
+
+								switch ($r->brawl) {
+									case 0:
+										array_push($acess,'<div class="text-danger"><i class="icofont-hand"></i>Não possui linguajem brawle.</div>' );
+										break;
+									case 1:
+										array_push($acess,'<div class="text-success"><i class="icofont-hand"></i> Possui linguajem brawle.</div>' );
+										break;
+									
 								}
-								
-								
+
 								echo 'L.marker(['.$r->lat.','.$r->lon.']).addTo(map)
 								.bindPopup(`<h2>'.$r->titulo.'</h2><h4>'.$r->info.'<br>'.implode($acess).'</h4>`);';
 								

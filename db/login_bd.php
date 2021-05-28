@@ -37,7 +37,7 @@
 		}
 		else {
 			
-			header('Location:login.php?erro=1');
+			header('Location:../pages/login.php?erro=1');
 		}
 	} catch (\Exception $e) {
 		file_put_contents("erros.txt",
