@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="icon" href="../includes/ico.png">
-		<title> Login </title>
+		<title> Entrar </title>
 		<meta name="viewport" content="width=device-width, initial-scale:1, maximum-scale:1">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css" media="screen and (min-width:770px)">
@@ -17,8 +17,8 @@
 
 
 		<div class="container">
-			<div class="shadow" style="position: absolute;top: 20%;left: 15%;width: 70vw;padding:2%">
-				<h1> Login </h1>
+			<div class="bg-black f-r p-t-2 text-center">
+				<h1> Entrar </h1>
 				<?php
 					$erro = filter_input(INPUT_GET, 'erro');
 
@@ -29,13 +29,13 @@
 				<form method="post" action="../db/login_bd.php">
 
 				<div class="form-group">
-					<label for="nome">Endereço de Email</label>
-					<input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="seu email aqui">
+					<label for="nome">Endereço de E-mail</label>
+					<input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Seu e-mail aqui">
 
 				</div>
 				<div class="form-group">
 					<label for="senha">Senha</label>
-					<input type="password" class="form-control" id="senha" name="senha" placeholder="sua senha aqui">
+					<input type="password" class="form-control" id="senha" name="senha" placeholder="Sua senha aqui">
 				</div>
 
 				<button type="submit" class="btn btn-primary">Entrar</button>

@@ -41,11 +41,22 @@
 				}
 
 				echo '<div class="col">';
+
 				echo '<h2>'.$r->titulo.'</h2>';
 				echo '<p>'.$r->info.'<br>'.implode(".<br>", $acess).'</p>`)</p>';
+
+				echo '<div class="row-md">';
 				echo '<a href="../db/verificamark_db.php?id='.$r->idmarkers.'">';
 				echo 'verificado';
 				echo '</a>';
+
+				echo '</div>';
+				echo '<div class="row-md">';
+				echo '<a href="../db/deletemark_db.php?id='.$r->idmarkers.'">';
+				echo 'apagar';
+				echo '</a>';
+				echo '</div>';
+
 				echo '</div>';
 				echo '<br><br>';
 			}
