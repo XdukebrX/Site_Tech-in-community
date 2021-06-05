@@ -5,18 +5,24 @@
     <link rel="icon" href="/includes/ico.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="includes/style.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Página inicial</title>
 </head>
     <body>
-                 <?php require 'includes/menuin.php'; ?>
-  
+    
+
 
          
         <div class="container bg-color-white">
+        <?php require 'includes/menuin.php'; ?>
+        <br>
+        <br>
+        
             <h1>Sobre a aplicação</h1>
 
             <p>Esta ferramenta foi criada para facilitar deficientes físicos encontrarem locais com acessibilidade para os mesmos. Para acessá-la abra o menu e selecione aplicação ou clique <a href="pages/map.php">aqui</a></p>

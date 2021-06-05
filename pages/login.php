@@ -5,25 +5,27 @@
 		<link rel="icon" href="../includes/ico.png">
 		<title> Entrar </title>
 		<meta name="viewport" content="width=device-width, initial-scale:1, maximum-scale:1">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css" media="screen and (min-width:770px)">
-		<link rel="stylesheet" href="../includes/style.css" media="screen and (min-width:770px)">
+		<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+		<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="../includes/style.css">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	</head>
 	<body>
 
-			<?php require '../includes/menu.php'; ?>
-
+			
 
 
 
 		<div class="container">
-			<div class="bg-black f-r p-t-2 text-center">
-				<h1> Entrar </h1>
+		<?php require '../includes/menu.php'; ?>
+
+			<div class="bg-black f-r p-t-2 ">
+				<h1 class="text-center"> Entrar </h1>
 				<?php
 					$erro = filter_input(INPUT_GET, 'erro');
 
 					if ($erro) {
-						echo '<p class="text-danger"> Login ou senha incorretos!!! </p>';
+						echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">Usuario ou senha incorretos.</div>';
 					}
 				?>
 				<form method="post" action="../db/login_bd.php">

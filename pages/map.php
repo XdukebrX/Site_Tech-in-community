@@ -6,7 +6,7 @@
 	<title></title>
 	<link rel="icon" href="../includes/ico.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../includes/style.css">
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -29,8 +29,9 @@
 		<script src="../lib/alerts.js" ></script>
 	
 			<div >
+				<div class="container">
 					<?php require '../includes/menu.php'; ?>
-
+				</div>
 
 				
 
@@ -139,5 +140,6 @@
 					</div>
 
 			</div>
+			
 	</body>
 	</html>
