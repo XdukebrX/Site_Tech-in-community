@@ -27,9 +27,11 @@
 				}
   			} else {
 				echo '<li  class="nav-item">';
-				echo '<a class="nav-link" href="login.php"> Entrar </a>';
+				echo '<a class="nav-link" href="../pages/login.php"> Entrar </a>';
 				echo '</li>';
-				
+				echo '<li  class="nav-item">';
+				echo '<a  class="nav-link" href="../pages/cadastro.php">  Cadastre-se</a>';
+				echo '</li>';
   			}
   		?>
 

@@ -100,20 +100,20 @@
 
 								switch ($r->pisotatil) {
 									case 0:
-										array_push($acess,'<div class="text-danger"><i class="icofont-map-pins"></i> Não possui piso tatil.</div>' );
+										array_push($acess,'<div class="text-danger"><i class="icofont-map-pins"></i> Não possui piso tátil.</div>' );
 										break;
 									case 1:
-										array_push($acess,'<div class="text-success"><i class="icofont-map-pins"></i> Possui piso tatil.</div>' );
+										array_push($acess,'<div class="text-success"><i class="icofont-map-pins"></i> Possui piso tátil.</div>' );
 										break;
 									
 								}
 
 								switch ($r->brawl) {
 									case 0:
-										array_push($acess,'<div class="text-danger"><i class="icofont-hand"></i>Não possui linguajem brawle.</div>' );
+										array_push($acess,'<div class="text-danger"><i class="icofont-hand"></i>Não possui linguagem braile.</div>' );
 										break;
 									case 1:
-										array_push($acess,'<div class="text-success"><i class="icofont-hand"></i> Possui linguajem brawle.</div>' );
+										array_push($acess,'<div class="text-success"><i class="icofont-hand"></i> Possui linguagem braile.</div>' );
 										break;
 									
 								}

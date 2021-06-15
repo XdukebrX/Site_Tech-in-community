@@ -3,13 +3,13 @@
 <head>
 		<meta charset="utf-8">
 		<link rel="icon" href="../includes/ico.png">
-		<title> lista marcaçao</title>
+		<title> Lista de Marcação</title>
 		<meta name="viewport" content="width=device-width, initial-scale:1, maximum-scale:1">
 		<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
 		<script src="../lib/bootstrap/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="../includes/style.css">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+		
 	</head>
 	<body>		
 		<div class="container">
@@ -33,33 +33,26 @@
 				array_push($acess,'Não possui rampa' );
 				}
 				if($r->pisotatil == 1){
-				array_push($acess,'Possui piso tatil' );
+				array_push($acess,'Possui piso tátil' );
 				}else{
-				array_push($acess,'Não possui piso tatil' );
+				array_push($acess,'Não possui piso tátil' );
 				}
 				if($r->brawl == 1){
-				array_push($acess,'Possui linguajem brawle' );
+				array_push($acess,'Possui linguagem braile' );
 				}else{
-				array_push($acess,'Não possui linguajem brawle' );
+				array_push($acess,'Não possui linguagem braile' );
 				}
 
 				echo '<div class="col">';
 
 				echo '<h2>'.$r->titulo.'</h2>';
-				echo '<p>'.$r->info.'<br>'.implode(".<br>", $acess).'</p>`)</p>';
-
-				echo '<div class="row-md">';
-				echo '<a href="../db/verificamark_db.php?id='.$r->idmarkers.'">';
-				echo 'verificado';
-				echo '</a>';
-
-				echo '</div>';
-				echo '<div class="row-md">';
-				echo '<a href="../db/deletemark_db.php?id='.$r->idmarkers.'">';
-				echo 'apagar';
-				echo '</a>';
-				echo '</div>';
-
+				echo '<p>'.$r->info.'<br>'.implode(".<br>", $acess).'</p>';
+				
+				echo '<div class="row">';
+    			echo '<div class="col-sm-12 text-center">';
+        		echo '<a class="btn btn-primary btn-md" href="../db/verificamark_db.php?id='.$r->idmarkers.'">Verificado</a>';
+        		echo '<a class="btn btn-danger btn-md" href="../db/deletemark_db.php?id='.$r->idmarkers.'" >Inválido</a>';
+     			echo '</div>';
 				echo '</div>';
 				echo '<br><br>';
 			}

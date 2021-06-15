@@ -21,6 +21,7 @@
 
 			<div class="bg-black f-r p-t-2 ">
 				<h1 class="text-center"> Entrar </h1>
+				<br><br>
 				<?php
 					$erro = filter_input(INPUT_GET, 'erro');
 
@@ -37,11 +38,12 @@
 					<input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Seu e-mail aqui">
 
 				</div>
+				<br><br>
 				<div class="form-group">
 					<label for="senha">Senha</label>
 					<input type="password" class="form-control" id="senha" name="senha" placeholder="Sua senha aqui">
 				</div>
-
+				<br><br>
 				<button type="submit" class="btn btn-primary">Entrar</button>
 				</form>
 			</div>

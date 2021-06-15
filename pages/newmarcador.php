@@ -32,9 +32,9 @@
 					<div class="form-group ">
 						<label for="ops">marque as opçoes de acessibilidade abaixo</label>
 						<br>
-						<input type="checkbox" name="ramp" value="1" checked> rampa<br>
-						<input type="checkbox" name="piso" value="1" checked> piso tatil <br>
-						<input type="checkbox" name="braw" value="1" checked> brawle <br>
+						<input type="checkbox" name="ramp" value="1" checked> Rampa<br>
+						<input type="checkbox" name="piso" value="1" checked> Piso tátil <br>
+						<input type="checkbox" name="braw" value="1" checked> Braile <br>
 
 						
 							
@@ -42,16 +42,16 @@
 				<!--	< um erro bem especifico>
 					<input type="hidden" name="lat" value="lat"> -->
 					
-					<button type="submit" class="btn btn-primary">confirma</button>
+					<button type="submit" class="btn btn-primary">Confirmar</button>
 				</form>
 
 				<div class="alert alert-danger" role="alert">
 				<h4 class="alert-heading">Atenção!</h4>
-				<p>As marcações não aparecem imediatamente no mapa primeiramente elas serão verificadas por um dos administradores</p>
+				<p>As marcações não aparecem imediatamente no mapa. Primeiramente elas serão verificadas por um dos administradores.</p>
 				
 				</div>
 			</div>
-				
+						
 			<?php
 			
 			if (isset($_GET['lat'])) {

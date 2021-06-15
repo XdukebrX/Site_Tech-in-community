@@ -31,9 +31,8 @@
 					echo '<p>Email: '.$r->email.'</p>';
 
 					echo '<div class="row-md">';
-					echo '<a class="btn btn-primary" href="../db/admin_cadastrar_db.php?id='.$r->id.'">';
-					echo 'Promover';
-					echo '</a>';
+					echo '<a class="btn btn-primary mr-2" href="../db/admin_cadastrar_db.php?id='.$r->id.'">Promover</a>';
+					echo '<a class="btn btn-danger btn-md" href="../db/deleteuser_db.php?id='.$r->id.'" >BANIR</a>';					
 					echo '</div>';
 
 					echo '</div>';

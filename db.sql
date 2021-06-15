@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `tcc`.`markers` (
   `cheked` TINYINT(3) UNSIGNED NOT NULL,
   `brawl` TINYINT(3) UNSIGNED NULL DEFAULT NULL,
   `lat` DOUBLE NOT NULL,
-  `lon` DOUBLE NULL DEFAULT NULL,
+  `lon` DOUBLE NOT NULL,
   PRIMARY KEY (`idmarkers`),
   INDEX `idcriador` (`idcriador` ASC) VISIBLE,
   CONSTRAINT `idcriador`
