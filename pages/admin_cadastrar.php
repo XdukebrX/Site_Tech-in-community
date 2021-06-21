@@ -20,7 +20,7 @@
 			<div class="">
 				<?php require '../includes/Conexao.php'; 
 				$con = new Conexao();
-				$sql = 'SELECT * FROM usuario WHERE isadm=0  ORDER BY id  DESC;';
+				$sql = 'SELECT * FROM usuario WHERE isadm=0  ORDER BY id  DESC;';         
 				$rs = $con->query($sql);
 				$resultados = $rs->fetchAll(PDO::FETCH_OBJ);
 				
