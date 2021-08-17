@@ -1,5 +1,5 @@
 <?php session_start();?>
-<nav class="navbar navbar-expand-lg navbar-light  bg-light">
+<nav class="navbar navbar-expand-lg navbar-light text-white  bg-dark">
   <a class="navbar-brand" href="/index.php">Menu</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>

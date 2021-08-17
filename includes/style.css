@@ -1,8 +1,16 @@
 
 body{
-	background-color: #ffffff81;
+	background-color: black;
+	color: white;
 }
 
+
+nav{
+
+	background-color: black;
+	color: aqua;
+
+}
 #mapid{
 	height: 80vh;
 }
